@@ -1,4 +1,4 @@
-def getCollatzPath(n):
+def getHailstoneSequence(n):
     """
         A Collatz Path is defined as a Path that follows:
         Take some number n:
@@ -63,8 +63,6 @@ def getIndexPositions(arr, item):
         if arr[i] == item:
             outarr.append(i)
     return outarr
-
-
 
 def plotArr(arr, display_str="-bo", display_str2="or"):
     import matplotlib.pyplot as plt
