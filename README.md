@@ -3,6 +3,12 @@
 ## Purpose
 Sequence Analysis for the 3n+1 problem - just having fun with it
 
+## Stuff to figure out
+
+- Notation is still kinda janky but lets come back to it
+- Unions of sequences feels odd for some reason. 
+    - Implicit assumption is Unions do not retain order but sequences need this. Definition issue?
+
 ## Overview
 
 Define the recurrence relation
@@ -37,6 +43,36 @@ Commonly used words captured below
 - Step: the index of a number in a Hailstone Sequence
 - Cycle: a repeated sequence of numbers contained within a sequence
 
+
+
+## The Main Idea
+Try to find sequences that have predictable number of steps until the Hailstone Sequence reaches a number less than the starting value
+
+If all $H(k)$ are known to converge for $k < n$ and $H(n)$ has some $i$ where $H(n)_i = H(k)$ then $H(k) \subseteq H(n)$ and $H(n)$ will converge.
+
+### Approach
+Partition $\N$ into 3 sets $ \{2k\} \cup \{ 4k+1 \} \cup \{4k-1\} $
+
+$$
+\begin{array}{ll}
+    2k      &= {2,4,6,8,10,12,14,16,18,20,...} \\
+    4k+1    &= {5,9,13,17,21,25,29,...} \\
+    4k-1    &= {3,7,11,15,19,23,27,...} 
+\end{array}
+$$
+The number of steps it takes for these to reach a number in the sequence less than the start
+$$
+\begin{array}{ll}
+    2k      &= {1,1,1,1,1,1,1,1,1,1,1,1,1,...} \\
+    4k+1    &= {3,3,3,3,3,3,3,...} \\
+    4k-1    &= {6,11,8,11,6,8,96,91,6,...} 
+\end{array}
+$$
+
+The numbers of interest are $4k-1$ (notice 27 is on this list).
+
+
+
 ## Functions
 
 Define the function
@@ -51,12 +87,6 @@ $$
 
 
 ## Proofs and stuff
-
-### Stuff to figure out
-
-- Notation is still kinda janky but lets come back to it
-- Unions of sequences feels odd for some reason. 
-    - Implicit assumption is Unions do not retain order but sequences need this. Definition issue?
 
 ### Idea 1
 If $H(n)$ contains a convergent subset $H(k)$ then  $H(n)$ is known to converge.
@@ -76,27 +106,9 @@ Since $n$ is even and $H(n)_0 = n$, then $H(n)_1$ = $n/2$ which is less than $n$
 
 Therefore $H(n)_1 < H(n)_0 $
 
-## The Main Idea
-Try to find sequences that have predictable number of steps until the Hailstone Sequence reaches a number less than the starting value
-
-If all $H(k)$ are known to converge for $k < n$ and $H(n)$ has some $i$ where $H(n)_i = H(k)$ then $H(k) \subseteq H(n)$ and $H(n)$ will converge.
-
-
-
-
-$$
-\begin{array}{ll}
-    2a      &= {2,4,6,8,10,12,14,16,18,20,...}  
-\\  4a+1    &= {5,9,13,17,21,25,29,...}
-\\  4a-1    &= {3,7,11,15,19,23,27,...}
-
-\\  16a-3   &= {}
-\\  32a-21  &= {}
-\end{array}
-$$
-
-
-
+##
+## ------------------------------------------------------------------------------------------------------------------------------
+##
 
 ### Old notes
 
