@@ -20,7 +20,7 @@ f_{n+1} =  \left\{
 \end{array} 
 \right.
 $$
-The Collatz Conjecture posits that for all $i \in \N$ a sequence $H(i)$ with $k$ steps has $H_k$ = $1$, where each value in $H$ follows the recurrence relation $f$
+The Collatz Conjecture posits that for all $i \in \mathbb{N}$ a sequence $H(i)$ with $k$ steps has $H_k$ = $1$, where each value in $H$ follows the recurrence relation $f$
 $$ 
 H(i) = 
 \{ 
@@ -51,7 +51,7 @@ Try to find sequences that have predictable number of steps until the Hailstone 
 If all $H(k)$ are known to converge for $k < n$ and $H(n)$ has some $i$ where $H(n)_i = H(k)$ then $H(k) \subseteq H(n)$ and $H(n)$ will converge.
 
 ### Approach
-Partition $\N$ into 3 sets $ \{2k\} \cup \{ 4k+1 \} \cup \{4k-1\} $
+Partition $\mathbb{N}$ into 3 sets $ \{2k\} \cup \{ 4k+1 \} \cup \{4k-1\} $
 
 $$
 \begin{array}{ll}
@@ -107,9 +107,9 @@ Therefore $H(n)_1 < H(n)_0 $
 
 
 ### Idea 3
-Let $\mathbb{O} = \{ 2n-1 : n \in \N \}$ denote the set of positive odd integers. 
+Let $\mathbb{O} = \{ 2n-1 : n \in \mathbb{N} \}$ denote the set of positive odd integers. 
 
-For all $j \in \N$, it follows that $\mathbb{O}$ can be partitioned by the union of sets:
+For all $j \in \mathbb{N}$, it follows that $\mathbb{O}$ can be partitioned by the union of sets:
 $$
     \mathbb{O} = \bigcup _{k=1}^\infty \left\{  2kj-2l+1 \right\}_{l=1}^j 
 $$
