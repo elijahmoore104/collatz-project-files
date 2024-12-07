@@ -1,4 +1,4 @@
-# collatz-project-files
+# Partitions and the Collatz Conjecture
 
 ## Purpose
 Sequence Analysis for the 3n+1 problem - just having fun with it
@@ -72,7 +72,6 @@ $$
 The numbers of interest are $4k-1$ (notice 27 is on this list).
 
 
-
 ## Functions
 
 Define the function
@@ -97,7 +96,7 @@ Example:
 If $H(2), H(3), ..., H(7)$ are known to converge, then $H(8)$ can be expressed as $H(8) = H(8)_0 \cup H(4)\ $ and is known to converge
 
 
-### Lemma 2
+### Idea 2
 Where $n$ is even, $H(n)$ has $H(n)_1 < H(n)_0 $
 
 **Proof:** 
@@ -106,7 +105,51 @@ Since $n$ is even and $H(n)_0 = n$, then $H(n)_1$ = $n/2$ which is less than $n$
 
 Therefore $H(n)_1 < H(n)_0 $
 
-##
+
+### Idea 3
+Let $\mathbb{O} = \{ 2n-1 : n \in \N \}$ denote the set of positive odd integers. 
+
+For all $j \in \N$, it follows that $\mathbb{O}$ can be partitioned by the union of sets:
+$$
+    \mathbb{O} = \bigcup _{k=1}^\infty \left\{  2kj-2l+1 \right\}_{l=1}^j 
+$$
+
+**Proof:**
+
+Probably induction but feels like a lot of work - can I be bothered?
+
+##### Case j=1:
+$$\large
+    \begin{array}{ll}
+    \mathbb{O} &= \bigcup _{k=1}^\infty \left\{  2k-2l+1 \right\}_{l=1}^1 \\ 
+                &= \bigcup _{k=1}^\infty \left\{  2k-1 \right\} \\
+                &= {1} \cup {3} \cup {5} \cup {7} \cup {...}
+    \end{array}
+$$
+
+##### Assume true for j=n:
+$$\large
+    \mathbb{O} = \bigcup _{k=1}^\infty \left\{  2kn-2l+1 \right\}_{l=1}^1 \\ 
+$$
+
+##### Prove true for j=n+1:
+
+
+## Other substitutions - probably useful
+
+$$\large
+\begin{array}{ll}
+    \mathbb{O} &= \{ 2n-1 \}_{n=1}^\infty \\
+                &= \lim_{n=1}^\infty \{ 2k-1 \}_{k=1}^n \\
+                &= \lim_{n=1}^\infty \{1, 3, 5, ..., 2n-1\} \\
+                &= \lim_{n=1}^\infty \{1, 5, 9, ..., \frac{4n}{2}-3, 3, 7, 11, ..., \frac{4n}{2}-1\} \\ 
+                &= \lim_{n=1}^\infty \{ 2k-3 \}_{k=1}^n \cup \{ 2k-1 \}_{k=1}^n \\ 
+                &= \{ 2k-3 \}_{k=1}^\infty \cup \{ 2k-1 \}_{k=1}^\infty  \\ 
+\end{array}
+$$
+
+
+
 ## ------------------------------------------------------------------------------------------------------------------------------
 ##
 
