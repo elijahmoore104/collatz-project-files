@@ -11,6 +11,9 @@ Sequence Analysis for the 3n+1 problem - just having fun with it
 
 ## Overview
 
+test:
+$$ f(x) = 2 $$
+
 Define the recurrence relation
 $$
 f_{n+1} =  \left\{
