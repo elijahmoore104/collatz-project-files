@@ -51,7 +51,7 @@ Try to find sequences that have predictable number of steps until the Hailstone 
 If all $H(k)$ are known to converge for $k < n$ and $H(n)$ has some $i$ where $H(n)_i = H(k)$ then $H(k) \subseteq H(n)$ and $H(n)$ will converge.
 
 ### Approach
-Partition $\mathbb{N}$ into 3 sets $ \{2k\} \cup \{ 4k+1 \} \cup \{4k-1\} $
+Partition $\mathbb{N}$ into 3 sets $\{2k\} \cup \{ 4k+1 \} \cup \{4k-1\}$
 
 $$
 \begin{array}{ll}
